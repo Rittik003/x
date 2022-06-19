@@ -1,15 +1,14 @@
 import Navbar from './component/Navbar';
 import TextForms from './component/TextForms';
-import About from './component/About';
+// import About from './component/About';
 import './App.css';
 import React, {useState} from 'react';
 import Alert from './component/Alert';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Switch,
+//   Route,
+// } from "react-router-dom";
 function App() {
   const[mode,setMode]=useState('light');
   const[alert,setAlert]=useState(null);
@@ -40,20 +39,20 @@ function App() {
   }
   return (
   <>
-  <Router>
+  {/* <Router> */}
     <Navbar title="MyWeb2" mode={mode} toggleMode={toggleMode}/>
     <Alert alert={alert}/>
     <div className="container my-3">
-    <Switch>
-          <Route path="/about">
+    {/* <Switch> */}
+          {/* <Route path="/about">
              <About />
           </Route>
-          <Route path="/">
+          <Route path="/"> */}
              <TextForms showAlert={showAlert} heading="Enter here"mode={mode}/>
-          </Route>
-    </Switch>
+          {/* </Route> */}
+    {/* </Switch> */}
 </div>
-</Router>
+{/* </Router> */}
 </>
 );
 }
